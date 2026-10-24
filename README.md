@@ -17,6 +17,7 @@
 
 **Website Company Profile & Media Promosi Modern dengan Alur Pemesanan Cepat via WhatsApp Langsung & Panel CMS Mandiri Tanpa Koding.**
 
+[Preview Tampilan](#-preview-tampilan-website) •
 [Fitur Utama](#-fitur-utama) •
 [Menu Unggulan](#-menu-unggulan) •
 [Arsitektur & Pola Desain](#-arsitektur--pola-desain) •
@@ -25,6 +26,22 @@
 [Husky Pre-commit](#-standar-husky--git-hook)
 
 </div>
+
+---
+
+## 📸 Preview Tampilan Website
+
+Berikut adalah cuplikan antarmuka (*user interface*) website **Quesillo.kita** yang dirancang responsif dan ramah pengguna (*mobile-friendly*):
+
+| Halaman Utama (*Home*) | Katalog Menu Unggulan |
+| :---: | :---: |
+| <img src="screenshots/01-home.png" alt="Halaman Utama Quesillo.kita" width="460" /> | <img src="screenshots/02-menu.png" alt="Katalog Menu Quesillo.kita" width="460" /> |
+| *Hero banner interaktif, pengenalan dessert karamel khas Venezuela, dan highlight keunggulan bahan alami.* | *Katalog 2 menu spesial (Original Classic & Matcha Green Tea) dengan tombol pemesanan langsung ke WhatsApp.* |
+
+| Galeri Real Product | Informasi Kontak & Lokasi |
+| :---: | :---: |
+| <img src="screenshots/03-galeri.png" alt="Galeri Produk Quesillo.kita" width="460" /> | <img src="screenshots/04-kontak.png" alt="Kontak dan Lokasi Quesillo.kita" width="460" /> |
+| *Galeri foto 100% real product dengan skeleton loading state yang mulus dan responsif.* | *Informasi lokasi, jam operasional, link media sosial, serta formulir testimoni langsung dari pembeli.* |
 
 ---
 
@@ -119,6 +136,11 @@ Web-Kuesillo/
 │   └── package.json
 ├── nginx/
 │   └── default.conf          # Reverse Proxy Configuration (:80 -> FE & BE)
+├── screenshots/              # Cuplikan Antarmuka Website (Preview UI Reviewer)
+│   ├── 01-home.png
+│   ├── 02-menu.png
+│   ├── 03-galeri.png
+│   └── 04-kontak.png
 ├── docker-compose.yml        # Orchestration (DB, Backend, Frontend, Nginx)
 ├── package.json              # Root Workspace & Husky Hook Scripts
 ├── .gitignore                # Aturan Git Ignore
