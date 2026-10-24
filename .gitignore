@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables & secrets
+.env
+*.env
+backend/.env
+
+# Uploads & Media
+uploads/*
+!uploads/.gitkeep
+
+# Build artifacts & logs
+dist/
+*.log
+.DS_Store
+.opencode/
+
+# Ignore all markdown documentation except README.md
+*.md
+**/*.md
+!README.md
+!/README.md

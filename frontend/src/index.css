@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-cream text-choco font-body; }
+.btn-chubby { @apply rounded-full px-6 py-3 font-chubby font-semibold tracking-wide shadow-soft active:scale-95 transition; }
+.card { @apply bg-white rounded-3xl shadow-soft p-4; }
+.input { @apply w-full rounded-2xl border-2 border-caramel-light bg-white px-4 py-3 outline-none focus:border-caramel; }
+.badge-tilt { @apply inline-block -rotate-6 rounded-full px-3 py-1 font-hand text-sm leading-none; }
+/* Judul gemoy: huruf bulat + bayangan karamel seperti stiker */
+.bubble-text { letter-spacing: .01em; text-shadow: 0 2px 0 #FFC98B, 0 4px 0 rgba(92,61,46,.12); }
+/* Label form admin — jelas untuk non-IT */
+.lbl { @apply block text-xs font-extrabold uppercase tracking-wide mb-1; }
+.hint { @apply block text-[11px] opacity-60 mt-1 font-semibold; }
+
+/* Pita berjalan ala jajanan pasar */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 18s linear infinite; }
+
+/* Blob mengambang di hero */
+@keyframes blob-float { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-14px) scale(1.06); } }
+.blob { position: absolute; border-radius: 9999px; filter: blur(2px); opacity: .5; animation: blob-float 6s ease-in-out infinite; }
+
+/* Kilau lewat di kartu promo */
+@keyframes shine { from { transform: translateX(-120%) skewX(-18deg); } to { transform: translateX(240%) skewX(-18deg); } }
+.shine::after { content: ''; position: absolute; top: 0; bottom: 0; width: 45%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent); animation: shine 3.2s ease-in-out infinite; }
+
+/* Uap mengepul untuk status menunggu */
+.steam { display: flex; gap: 7px; height: 28px; align-items: flex-end; justify-content: center; }
+.steam span { width: 5px; height: 24px; border-radius: 99px; background: linear-gradient(to top, rgba(92,61,46,0), rgba(92,61,46,.5)); opacity: 0; animation: steam-rise 1.6s ease-in-out infinite; }
+@keyframes steam-rise { 0% { transform: translateY(8px) scaleY(.5); opacity: 0; } 40% { opacity: .9; } 100% { transform: translateY(-12px) translateX(4px) scaleY(1.1); opacity: 0; } }
