@@ -16,6 +16,7 @@ dist/
 *.log
 .DS_Store
 .opencode/
+opencode.json
 
 # Ignore all markdown documentation except README.md
 *.md
