@@ -16,10 +16,16 @@ export function FadeIn({ children, className, delay = 0 }) {
 }
 
 // Grid yang muncul satu-satu
-export function Stagger({ children, className }) {
+export function Stagger({ children, className, animateDirectly = false }) {
   return (
-    <motion.div className={className} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-40px' }}
-      variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}>
+    <motion.div
+      className={className}
+      initial="hidden"
+      animate={animateDirectly ? "show" : undefined}
+      whileInView={!animateDirectly ? "show" : undefined}
+      viewport={!animateDirectly ? { once: true, margin: '-20px' } : undefined}
+      variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
+    >
       {children}
     </motion.div>
   );
