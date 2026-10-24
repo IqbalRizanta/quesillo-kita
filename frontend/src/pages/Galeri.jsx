@@ -10,7 +10,7 @@ export default function Galeri() {
   return (
     <div className="pt-4 space-y-3">
       <h1 className="font-chubby font-semibold text-xl bubble-text flex items-center gap-2">Galeri Manis <Bouncy anim="spin"><Images size={24} /></Bouncy></h1>
-      <p className="text-sm opacity-70">Semua foto bisa diganti admin dari dashboard tanpa coding.</p>
+      <p className="text-sm opacity-70">Gambar 100% Real Product</p>
       <Stagger className="grid grid-cols-2 gap-3">
         {data.map(g => (
           <Item key={g.id}>
